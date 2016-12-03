@@ -1,0 +1,16 @@
+[package]
+name = "tll-array"
+version = "0.1.0"
+authors = ["Sean Leffler <sean@errno.com>"]
+
+[dependencies]
+type-operators = "0.3.4"
+type-level-logic = "0.1.0"
+tll-iterator = { git = "https://github.com/sdleffler/tll-iterator-rs.git" }
+unreachable = "0.1.1"
+
+[features]
+default = []
+specialization = ["type-operators/specialization", "type-level-logic/specialization"]
+
+nightly = ["specialization"]
