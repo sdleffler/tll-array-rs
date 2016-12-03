@@ -11,6 +11,8 @@
 //! type-encoded lengths (similar to how this crate provides arrays with type-encoded lengths).
 //! `SizedIterator<L, Item = T>`s can be `.collect_sized()` into `Array<L, T>`.
 
+#![cfg_attr(feature = "specialization", feature(specialization))]
+
 extern crate unreachable;
 
 #[macro_use]
